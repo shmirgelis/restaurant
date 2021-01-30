@@ -9,7 +9,7 @@ namespace Restaurant
     {
         private readonly string[] _ingridients;
         private readonly string _stock;
-        public string Name { get; }
+        public string Name { get; } //Paaiskink dar karta kaip sitas get cia panaudojamas, kazkaip man neakivaizdu kur jis cia reikalingas
         public Soup(string name, string stock, string[] ingridients)
         {
             Name = name;
