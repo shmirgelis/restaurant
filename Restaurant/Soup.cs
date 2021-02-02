@@ -5,11 +5,11 @@ using System.Threading;
 
 namespace Restaurant
 {
-    public class Soup
+    public class Soup : IPrepareFood
     {
         private readonly string[] _ingridients;
         private readonly string _stock;
-        public string Name { get; } //Paaiskink dar karta kaip sitas get cia panaudojamas, kazkaip man neakivaizdu kur jis cia reikalingas
+        public string Name { get; } 
         public Soup(string name, string stock, string[] ingridients)
         {
             Name = name;
@@ -17,7 +17,7 @@ namespace Restaurant
             _ingridients = ingridients;
         }
 
-        public void MakeSoup()
+        public void Prepare()
         {
             Console.WriteLine($"Making {Name} soup");
             AddStock();

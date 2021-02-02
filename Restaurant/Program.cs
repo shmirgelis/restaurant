@@ -6,19 +6,21 @@ namespace Restaurant
     {
         static void Main()
         {
-            List<Pizza> OrderQueue = GetOrders();
+            List<IPrepareFood> OrderQueue = GetOrders();
             foreach (var item in OrderQueue)
             {
                 item.Prepare();
             }
         }
 
-        private static List<Pizza> GetOrders()
+        private static List<IPrepareFood> GetOrders()
         {
-            var orders = new List<Pizza>()
+            var orders = new List<IPrepareFood>()
             {
-                new Pizza("Margherita", new string[] { "tomatoes", "basil", "mozzarella" }), // <--- kaip sitai veikia, listas su vienodais objektais?   
-                new Pizza("Pepperoni", new string[] { "pepperoni", "mozzarella" }),          // <--- ar nereikia priskirt skirtingiems variablams?
+                new Pizza("Margherita", new string[] { "tomatoes", "basil", "mozzarella" }),
+                new Pizza("Margherita", new string[] { "tomatoes", "basil", "mozzarella" }),  
+                new Pizza("Pepperoni", new string[] { "pepperoni", "mozzarella" }), 
+                new Soup("Morku", "Darzoviu", new string[] {"morkos", "svogunai", "mesa", "pipirai", "druska" })
             };
             return orders;
         }

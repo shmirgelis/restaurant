@@ -3,7 +3,7 @@ using System.Threading;
 
 namespace Restaurant
 {
-    public class Pizza
+    public class Pizza : IPrepareFood
     {
         private readonly string[] _toppings;
 
