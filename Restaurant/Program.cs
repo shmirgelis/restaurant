@@ -9,7 +9,9 @@ namespace Restaurant
             List<IPrepareFood> OrderQueue = GetOrders();
             foreach (var item in OrderQueue)
             {
+                System.Console.WriteLine(item.Name);
                 item.Prepare();
+                             
             }
         }
 

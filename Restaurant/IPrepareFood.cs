@@ -3,5 +3,6 @@
     public interface IPrepareFood
     {
         void Prepare();
+        string Name{ get; }
     }
 }
